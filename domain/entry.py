@@ -20,8 +20,8 @@ class Entry:
                 self.value = 0
                 self.empty = True
         else:
-            raise ValueError("Invalid entry type: only numbers and"
-                             " '.' are allowed")
+            raise TypeError("Invalid entry type: only numbers and"
+                            " '.' are allowed")
 
     def __eq__(self, other):
         if isinstance(other, Entry):

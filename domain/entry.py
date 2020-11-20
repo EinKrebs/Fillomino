@@ -18,3 +18,6 @@ class Entry:
         else:
             raise ValueError("Invalid entry type: only numbers and"
                              " '.' are allowed")
+
+    def __str__(self):
+        return '.' if self.empty else str(self.value)

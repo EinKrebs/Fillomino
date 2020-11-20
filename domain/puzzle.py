@@ -29,9 +29,10 @@ class Puzzle:
             raise ValueError("Invalid width")
         return self.content[i][j]
 
-    def to_str(self):
-        return '\n'.join((' '.join(str(entry) for entry in line))
-                         for line in self.content)
+    def __str__(self):
+        return (f'{self.width} {self.height}\n'
+                + '\n'.join((' '.join(str(entry) for entry in line))
+                            for line in self.content))
 
     @staticmethod
     def from_str(text):

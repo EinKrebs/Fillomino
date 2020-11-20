@@ -11,7 +11,7 @@ deltas = [(0, 1), (0, -1), (1, 0), (-1, 0)]
 
 def random_generate(width, height, min_value, max_value)\
         -> typing.Tuple[Puzzle, Puzzle]:
-    if min_value <= 0 or max_value <= 0 or min_value <= max_value:
+    if min_value <= 0 or max_value <= 0 or min_value > max_value:
         raise ValueError("Invalid min/max value")
     while True:
         res = [[random.randint(min_value, max_value) for _ in range(width)]
